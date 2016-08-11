@@ -1,25 +1,57 @@
 <head>
-  <title>esClient</title>
+  <title>CaelisSante Logs Client</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
+<body class="grey lighten-4">
 
-  {{> hello}}
-  {{> info}}
+    <div class="header clearfix">
+      <nav>
+        <div class="nav-wrapper blue lighten-1 z-depth-2">
+          <a href="#" class="brand-logo center">
+            <img width="150" src="http://caelisdatacenter.fr/images/001-rvb-u5649.png" class="responsive-img caelislogo">
+          </a>
+          <ul id="login-form" class="left">
+            <li><a href="#" class="nav-item active logButtons">{{> loginButtons}}</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Historique</a></li>
+            <li><a href="#">Demande</a></li>
+            <li class="indicesButton"><a href="#">Indices</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    {{#if showIndicesList}}
+      {{> indicesButtons }}
+    {{/if}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="indicesButtons">
+  <div class="row indicesButtons container">
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Applications</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Cisco ASA</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Switches</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Syslog</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Auth</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Fail2Ban</a>
+    </div>
+    <div class="col">
+      <a class="waves-effect waves-light btn light-blue darken-1 l2">Windows</a>
+    </div>
+  </div>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="search-form">
+
 </template>

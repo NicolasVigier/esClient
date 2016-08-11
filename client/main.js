@@ -20,3 +20,19 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+
+Template.search-form.helpers({
+
+});
+
+
+Template.indicesList.helpers({
+
+});
+
+Template.name.events({
+  "click #search-button": function(event, template){
+
+  }
+});
