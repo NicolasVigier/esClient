@@ -1,4 +1,4 @@
-History = new Mongo.Collection("History");
+History = new Mongo.Collection("history");
 History.allow({
   insert: function(){
     return true;
@@ -11,13 +11,13 @@ History.allow({
   }
 });
 
-Requests = new Mongo.Collection("Requests");
+Requests = new Mongo.Collection("requests");
 Requests.allow({
   insert: function(){
     return true;
   },
   update: function(){
-    return false; 
+    return false;
   },
   remove: function(){
     return true;
